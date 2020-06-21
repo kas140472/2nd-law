@@ -45,16 +45,16 @@
 
         function start() {
 
-             window.requestAnimFrame = (function(){
+             window.requestAnimFrame = (function()
+             {
                 return window.requestAnimationFrame     ||
                     window.webkitRequestAnimationFrame  ||
                     window.mozRequestAnimationFrame     ||
                     window.oRequestAnimationFrame       ||
                     window.msRequestAnimationFrame      ||
-                    function( callback ) {
-                        window.setTimeout(callback, 1000 / 60);
-                    };
-            })();
+                    function( callback ) 
+                    {window.setTimeout(callback, 1000 / 60);};
+             }                          )();
 
             canvas=document.getElementById("simscreen");
             ctx=canvas.getContext("2d");
@@ -63,7 +63,7 @@
             x=canvas.height-20;
             y=canvas.width/2;
 
-            crankCaseColor = '#9EA18C',
+                crankCaseColor = '#9EA18C',
                 pistonColor = '#87CEEB',
                 //test='#f4eeff',
                 left_wall_x=100,
@@ -75,7 +75,8 @@
 
 
 
-                cylinder = {
+                cylinder = 
+                {
                     draw : function () {
 
                         ctx.strokeStyle = crankCaseColor;
@@ -120,6 +121,7 @@
                         ctx.moveTo((right_wall_x + left_wall_x)/2,left_wall_y_start);
                         ctx.lineTo((right_wall_x + left_wall_x)/2,left_wall_y_end);
                         ctx.stroke();
+                
 
                         
 
@@ -295,17 +297,21 @@
                         else{
                             step=0;
                         }
+
                     }
+                }
+                    
 
                      (function animloop(){
                 requestAnimFrame(animloop);
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 cylinder.draw();
             })();
+        
 
-                };
+                
 
-        function draw(){
+        function drawb(){
             ctx.clearRect(0,0,canvas.width,canvas.height)
             for(var i=0;i<ballCount;i++){
 
@@ -349,10 +355,11 @@
             }
         }
 
-        setInterval(draw,100);
-        draw();
+        setInterval(drawb,100);
+        drawb();
 
         // balls end here
+    };
 
 
         function simstate() {
