@@ -138,6 +138,7 @@ div#variables
 	top:120px;
 	height: 285px;
 	width: 175px;
+	line-height: 80%;
 }
 
 div#controls
@@ -161,7 +162,7 @@ input#l4spinner{
 
 }
 
-.graph
+/*.graph
 {
 	padding-top: 344px;
 	padding-left:250px;
@@ -213,7 +214,7 @@ input#l4spinner{
 	position: absolute;
 	left: 38px;
 	top: 140px;
-}
+}*/
 
 #ball
 {
@@ -222,6 +223,28 @@ input#l4spinner{
 	width: 50px;
 	padding-top: 210px;
 	padding-left:130px;
+}
+
+div#controls2
+{
+	position:absolute;
+	left:617px;
+	top:120px;
+	height: 140px;
+	width: 175px;
+	display: block;
+	line-height: 70%;
+}
+
+div#controls3
+{
+	position:absolute;
+	left:707px;
+	top:120px;
+	height: 140px;
+	width: 175px;
+	display: inline-block;
+	line-height: 70%;
 }
 
 #rotationbutton
